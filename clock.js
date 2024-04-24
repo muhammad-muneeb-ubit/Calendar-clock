@@ -1,0 +1,46 @@
+function updateDate(){
+// let box1 = document.getElementById("box1");
+// let box2 = document.getElementById("box2");
+// let box3 = document.getElementById("box3");
+// let box4 = document.getElementById("box4");
+// let box5 = document.getElementById("box5");
+// let box6 = document.getElementById("box6");
+// let newDate = new Date();
+// let date1 = newDate.getDate();
+// let month1 = newDate.getMonth()+1;
+// let year = newDate.getFullYear();
+// let minutes = newDate.getMinutes();
+// let second = newDate.getSeconds();
+// let hour = newDate.getHours();
+// box1.innerText = date1;
+// box2.innerText = "0"+month1;
+// box3.innerText = year;
+// box4.innerText = hour;
+// box5.innerText = minutes;
+// // console.log(box5.length);
+// box6.innerText = second;
+    let box1 = document.getElementById("box1");
+    let box2 = document.getElementById("box2");
+    let box3 = document.getElementById("box3");
+    let box4 = document.getElementById("box4");
+    let box5 = document.getElementById("box5");
+    let box6 = document.getElementById("box6");
+    let newDate = new Date();
+    let date1 = newDate.getDate();
+    let month1 = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    let minutes = newDate.getMinutes();
+    let second = newDate.getSeconds();
+    let hour = newDate.getHours();
+    box1.innerText = date1;
+    box2.innerText = "0" + month1;
+    box3.innerText = year;
+    box4.innerText = hour;
+    box5.innerText = minutes;
+    (box5.innerHTML.length < 1 ) ? (box5.innerText = "0" + box5.innerText):box5.innerText;
+    // condition ? expression1 : expression2
+    box6.innerText = second;
+    (box6.innerHTML.length < 1 ) ? (box6.innerText = "0" + box6.innerText):box6.innerText;
+    
+    setInterval(updateDate, 1000);
+};
